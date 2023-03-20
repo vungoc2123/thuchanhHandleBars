@@ -1,0 +1,16 @@
+<h1>Calculator</h1>
+  <form method="post" action="/">
+    <input type="text" name="a" placeholder="Number 1" value={{a}}>
+    <select name="operator" id="selected">
+      <option {{#if add}}selected{{/if}} value="+">+</option>
+      <option {{#if subtract}}selected{{/if}} value="-">-</option>
+      <option {{#if multiply}}selected{{/if}} value="*">*</option> 
+      <option {{#if devide}}selected{{/if}} value="/">/</option>
+    </select>
+    <input type="text" name="b" placeholder="Number 2" value={{b}}>
+    <button type="submit">Calculate</button>
+  </form>
+  
+  {{#if result}}
+    <h1>{{result}}</h1>
+  {{/if}}
